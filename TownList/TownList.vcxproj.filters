@@ -55,4 +55,13 @@
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="data_ru.txt" />
+    <Text Include="data_ua.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="prototype.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
