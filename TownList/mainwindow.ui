@@ -1,20 +1,354 @@
 <UI version="4.0" >
  <class>MainWindowClass</class>
  <widget class="QWidget" name="MainWindowClass" >
-  <property name="objectName" >
-   <string notr="true">MainWindowClass</string>
-  </property>
-  <property name="geometry" >
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>600</width>
-    <height>400</height>
-   </rect>
-  </property>
-  <property name="windowTitle" >
-   <string>MainWindow</string>
-  </property>$centralwidget$
+	<property name="geometry">
+		<rect>
+			<x>0</x>
+			<y>0</y>
+			<width>1014</width>
+			<height>638</height>
+		</rect>
+	</property>
+	<property name="windowTitle">
+		<string>TownList</string>
+	</property>
+	<widget class="QWidget" name="horizontalLayoutWidget">
+		<property name="geometry">
+			<rect>
+				<x>30</x>
+				<y>20</y>
+				<width>951</width>
+				<height>561</height>
+			</rect>
+		</property>
+		<layout class="QHBoxLayout" name="main_horizontal_layout">
+			<item>
+				<widget class="QFrame" name="frame_country">
+					<property name="frameShape">
+						<enum>QFrame::Box</enum>
+					</property>
+					<property name="frameShadow">
+						<enum>QFrame::Plain</enum>
+					</property>
+					<property name="midLineWidth">
+						<number>0</number>
+					</property>
+					<widget class="QWidget" name="verticalLayoutWidget_2">
+						<property name="geometry">
+							<rect>
+								<x>10</x>
+								<y>20</y>
+								<width>291</width>
+								<height>531</height>
+							</rect>
+						</property>
+						<layout class="QVBoxLayout" name="vertical_layout_country">
+							<item>
+								<widget class="QLabel" name="lbl_country">
+									<property name="font">
+										<font>
+											<pointsize>10</pointsize>
+											<weight>75</weight>
+											<bold>true</bold>
+											<underline>true</underline>
+										</font>
+									</property>
+									<property name="text">
+										<string>&amp;Country</string>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+									<property name="buddy">
+										<cstring>view_country</cstring>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QListView" name="view_country">
+									<property name="horizontalScrollBarPolicy">
+										<enum>Qt::ScrollBarAlwaysOff</enum>
+									</property>
+									<property name="movement">
+										<enum>QListView::Static</enum>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontalLayout_3">
+									<item>
+										<widget class="QLineEdit" name="edit_country">
+											<property name="readOnly">
+												<bool>true</bool>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_copy_country">
+											<property name="font">
+												<font>
+													<weight>50</weight>
+													<italic>false</italic>
+													<bold>false</bold>
+													<underline>false</underline>
+													<strikeout>false</strikeout>
+													<kerning>true</kerning>
+												</font>
+											</property>
+											<property name="autoFillBackground">
+												<bool>false</bool>
+											</property>
+											<property name="text">
+												<string>Copy</string>
+											</property>
+										</widget>
+									</item>
+								</layout>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontal_layout_country">
+									<item>
+										<widget class="QPushButton" name="btn_add_country">
+											<property name="text">
+												<string>Add</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_del_country">
+											<property name="text">
+												<string>Delete</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<spacer name="horizontal_spacer">
+											<property name="orientation">
+												<enum>Qt::Horizontal</enum>
+											</property>
+											<property name="sizeHint" stdset="0">
+												<size>
+													<width>40</width>
+													<height>20</height>
+												</size>
+											</property>
+										</spacer>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_save_country">
+											<property name="text">
+												<string> Save Changes</string>
+											</property>
+										</widget>
+									</item>
+								</layout>
+							</item>
+						</layout>
+					</widget>
+				</widget>
+			</item>
+			<item>
+				<widget class="QFrame" name="frame_region">
+					<property name="frameShape">
+						<enum>QFrame::Box</enum>
+					</property>
+					<property name="frameShadow">
+						<enum>QFrame::Plain</enum>
+					</property>
+					<property name="midLineWidth">
+						<number>0</number>
+					</property>
+					<widget class="QWidget" name="verticalLayoutWidget_3">
+						<property name="geometry">
+							<rect>
+								<x>10</x>
+								<y>20</y>
+								<width>291</width>
+								<height>531</height>
+							</rect>
+						</property>
+						<layout class="QVBoxLayout" name="vertical_layout_region">
+							<item>
+								<widget class="QLabel" name="lbl_region">
+									<property name="font">
+										<font>
+											<pointsize>10</pointsize>
+											<weight>75</weight>
+											<bold>true</bold>
+											<underline>true</underline>
+										</font>
+									</property>
+									<property name="text">
+										<string>&amp;Region</string>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+									<property name="buddy">
+										<cstring>view_region</cstring>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QListView" name="view_region"/>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontalLayout_2">
+									<item>
+										<widget class="QLineEdit" name="edit_region">
+											<property name="readOnly">
+												<bool>true</bool>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_copy_region">
+											<property name="text">
+												<string>Copy</string>
+											</property>
+										</widget>
+									</item>
+								</layout>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontal_layout_region">
+									<item>
+										<widget class="QPushButton" name="btn_add_region">
+											<property name="text">
+												<string>Add</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_del_region">
+											<property name="text">
+												<string>Delete</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<spacer name="horizontal_spacer_2">
+											<property name="orientation">
+												<enum>Qt::Horizontal</enum>
+											</property>
+											<property name="sizeHint" stdset="0">
+												<size>
+													<width>40</width>
+													<height>20</height>
+												</size>
+											</property>
+										</spacer>
+									</item>
+								</layout>
+							</item>
+						</layout>
+					</widget>
+				</widget>
+			</item>
+			<item>
+				<widget class="QFrame" name="frame_district">
+					<property name="frameShape">
+						<enum>QFrame::Box</enum>
+					</property>
+					<property name="frameShadow">
+						<enum>QFrame::Plain</enum>
+					</property>
+					<property name="midLineWidth">
+						<number>0</number>
+					</property>
+					<widget class="QWidget" name="verticalLayoutWidget">
+						<property name="geometry">
+							<rect>
+								<x>10</x>
+								<y>20</y>
+								<width>291</width>
+								<height>531</height>
+							</rect>
+						</property>
+						<layout class="QVBoxLayout" name="vertical_layout_distrcit">
+							<item>
+								<widget class="QLabel" name="lbl_district">
+									<property name="font">
+										<font>
+											<pointsize>10</pointsize>
+											<weight>75</weight>
+											<bold>true</bold>
+											<underline>true</underline>
+										</font>
+									</property>
+									<property name="text">
+										<string>&amp;District</string>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+									<property name="buddy">
+										<cstring>view_district</cstring>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QListView" name="view_district">
+									<property name="enabled">
+										<bool>true</bool>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontalLayout_4">
+									<item>
+										<widget class="QLineEdit" name="edit_district">
+											<property name="readOnly">
+												<bool>true</bool>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_copy_district">
+											<property name="text">
+												<string>Copy</string>
+											</property>
+										</widget>
+									</item>
+								</layout>
+							</item>
+							<item>
+								<layout class="QHBoxLayout" name="horizontal_layout_district">
+									<item>
+										<widget class="QPushButton" name="btn_add_district">
+											<property name="text">
+												<string>Add</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<widget class="QPushButton" name="btn_del_district">
+											<property name="text">
+												<string>Delete</string>
+											</property>
+										</widget>
+									</item>
+									<item>
+										<spacer name="horizontal_spacer_3">
+											<property name="orientation">
+												<enum>Qt::Horizontal</enum>
+											</property>
+											<property name="sizeHint" stdset="0">
+												<size>
+													<width>40</width>
+													<height>20</height>
+												</size>
+											</property>
+										</spacer>
+									</item>
+								</layout>
+							</item>
+						</layout>
+					</widget>
+				</widget>
+			</item>
+		</layout>
+	</widget>
  </widget>
  <layoutDefault spacing="6" margin="11" />
  <pixmapfunction></pixmapfunction>
